@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<title>Yes or No?</title>
+
+<script>
+  window.addEventListener('load', function() {
+  var selector = Math.random() < .5 ? ".yes" : ".no";
+  document.querySelector(selector).classList.add('maybe');
+});
+</script>
+<style>
+body{
+  font-size: calc(69*4.2px);
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000000;
+}
+
+div{
+  margin: auto;
+  margin-top: 15%
+}
+.yes, .no { display: none; }
+.yes.maybe {
+  display: block; 
+  background: #4F3EE2;
+  color: #000000;
+  background: -webkit-linear-gradient(top left, #4F3EE2, #FFFFFF);
+  background: -moz-linear-gradient(top left, #4F3EE2, #FFFFFF);
+  background: linear-gradient(to bottom right, #4F3EE2, #FFFFFF);
+}
+.no.maybe { 
+  display: block; 
+  background: #260928;
+color: #cfcfcf;
+  background: -webkit-linear-gradient(top left, #260928, #F76B1F);
+  background: -moz-linear-gradient(top left, #260928, #F76B1F);
+  background: linear-gradient(to bottom right, #260928, #F76B1F);
+}
+
+</style>
+</head>
+
+<body>
+<div class="no">No.</div>
+<div class="yes">Yes.</div>
+</body>
+</html>
